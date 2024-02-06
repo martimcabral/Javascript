@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adevenhador</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Bem-Vindo ao Adivinhador de Números em JavaScript!</h1> <!-- Yuuupiiiee -->
+
+    <input type="number" id="numberInput" name="campo_de_adivinhacao" min="1" max="100"> <!-- Input do Numero -->
+    <button onclick="match()">Adivinhar</button><br> <!-- Chama a função "match()" para comparar -->
+    <p id="result">Comparações irão aparecer aqui</p><br> <!-- Texto que irá sendo substituido pelo o resultado das Comparaçoes -->
+
+    <script>
+        var y = 0, x = 0, tentativas = 0 // Inicialização das variaveis
+
+        function start() {
+            y = Math.round(100 * Math.random()) // Cria um número aleatório de 1 a 100
+            console.log("Número aleatório criado:", y) // Debug
+        }
+
+        function match() { 
+            x = document.getElementById('numberInput').value; // Faz a variavel x ser o input do HTML
+            tentativas++ // Adiciona mais 1 valor às tentativas
+            console.log("Número adivinhado:", x) // Debug
+            console.log("Tentativas:", tentativas) // Debug
+
+            if (x == y) { // Compara os Valores substituido o elemento HTML 'result' por um texto de Comparação
+                document.getElementById('result').textContent = "Número Certo!" + "\nNumero de Tentativas: " + tentativas
+                start()
+            } else if (x < y){
+                document.getElementById('result').textContent = "Número Pequeno!"
+            } else if (x > y) {
+                document.getElementById('result').textContent = "Numero Grande!"
+            }
+        }
+
+        start(); // Inicia a função start quando a página é carregada
+    </script>
+</body>
+</html>
