@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>SMC com AS</title>
+</head>
+<body>
+<h1>SMC</h1>
+<h2>com AS diz:</h2>
+
+<script Language="JavaScript">
+
+nome=prompt("Como te chamas????");
+alert("Bem vindo "+nome+", eu sou a Super Máquina de contar com AS - Artificial Stupidity... vamos contar!");
+
+ini=prompt("Porque numero desejas iniciar a contagem?");
+fim=prompt("Em que numero desejas terminar a contagem?");
+
+if (isNaN(ini)==false && isNaN(fim)==false)
+{
+
+
+if ( ini<fim ) // Conta crescente
+	{
+	for ( var k=eval(ini); k<=eval(fim); k=k+1)
+		{
+		document.write(k+" - ");
+		}
+		
+	} else { // senão conta decrescente
+	for ( var k=eval(ini); k>=eval(fim); k=k-1)
+		{
+		document.write(k+" - ");
+		}
+	}
+document.write("FIM!!<br>Mais um resultado fantastico da SMC AS<br>Cya "+nome);
+
+
+} else {
+alert("OMG!! "+nome+", só se podem contar numeros, ADAAAHHH!");
+}
+</script>
+
+<h2>F5 para reiniciar...</h2>
+</body>
+</html>

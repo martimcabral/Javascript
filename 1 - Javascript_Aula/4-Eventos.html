@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Eventos</title>
+
+<script>
+function load() {
+    alert("Página carregada!");
+}
+function tecla() {
+    alert("ké? Agora estou ocupado!!");
+}
+</script>
+
+</head>
+<body onload="load()" onkeydown="tecla()">
+
+<h1>Eventos</h1>
+<center>
+
+<h3>onclick</h3>
+<button onclick="document.getElementById('b1').innerHTML=Date()">Que dia é hoje?</button><br>
+<p id="b1">A data vai aparecer aqui</p><br>
+
+<h3>onclick - innerHTML</h3>
+<button onclick="this.innerHTML=Date()">Que dia é hoje?</button>
+<br><br>
+
+<h3>onmouseover - onmouseout</h3>
+<button onmouseover="this.innerHTML='Aii!!! Sai daqui!!!'" onmouseout="this.innerHTML='Vem cá rato vem..'">Vem cá rato vem..</button>
+<br><br>
+
+<h3>onkeydown</h3>
+<h4>Carregue em qualquer tecla...</h4>
+<br>
+
+</center>
+</body>
+</html>
