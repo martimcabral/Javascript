@@ -1,0 +1,24 @@
+<html>
+<head>
+
+<script Language="JavaScript">
+	function escreve(form) {
+		document.write(form.cor.value);
+		}
+</script>
+
+	<title>Select</title>
+</head>
+
+<body bgcolor="white">
+
+	<form>
+	<select NAME="cor" onchange="escreve(this.form)">
+		<OPTION VALUE="None">Escolha uma cor...</option>
+		<OPTION VALUE="red">Vermelho</option>
+		<OPTION VALUE="blue">Azul</option>
+	</select>
+	</form>
+
+</body>
+</html>

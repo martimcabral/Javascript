@@ -1,0 +1,35 @@
+<html>
+<head>
+
+<script Language="JavaScript">
+	function calcula(form) {
+		var soma=0
+		if (form.extq.checked==true) {
+			soma=soma+eval(form.extq.value)
+			} else soma=soma+0
+		if (form.mgrossa.checked==true) {
+			soma=soma+eval(form.mgrossa.value)
+			} else soma=soma+0
+		if (form.bacon.checked==true) {
+			soma=soma+eval(form.bacon.value)
+			} else soma=soma+0
+		form.total.value=soma
+		}
+</script>
+
+	<title>Checkbox</title>
+</head>
+
+<body>
+
+	<form>
+
+	<INPUT TYPE="checkbox" NAME="extq" VALUE="10" onchange="calcula(this.form)">Extra-queijo
+	<INPUT TYPE="checkbox" NAME="mgrossa" VALUE="22" onchange="calcula(this.form)">Massa grossa
+	<INPUT TYPE="checkbox" NAME="bacon" VALUE="15" onchange="calcula(this.form)">Bacon frito
+	
+	<INPUT TYPE="text" NAME="total" SIZE="2">	
+</form>
+
+</body>
+</html>

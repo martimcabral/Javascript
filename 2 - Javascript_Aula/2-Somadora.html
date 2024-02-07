@@ -1,0 +1,25 @@
+<html>
+<head>
+<title>Somadora</title>
+</head>
+<body>
+<script Language="JavaScript">
+function calcula(form) {
+	var soma = eval(form.campo1.value)+eval(form.campo2.value);
+	form.resultado.value=soma;
+	}
+</script>
+<form>
+<h4>Somadora:</h4>
+Parcela 1:
+<INPUT TYPE="text" name="campo1"> <p>
+Parcela 2:
+<INPUT TYPE="text" name="campo2"> <p>
+<INPUT TYPE="button" VALUE="Calcular" onClick="calcula(this.form)">
+<INPUT TYPE="reset" VALUE="Limpar"> <p>
+Resultado:
+<INPUT TYPE="text" name="resultado"> <p>
+</form>
+
+</body>
+</html>
