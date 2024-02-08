@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bananas e Laranjas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <fieldset>
+        <legend>Formula 1</legend>
+        <table id="dynamic-table">
+            <thead>
+                <tr>
+                    <th class="big-padding">NAME</th>
+                    <th class="small-padding">POINTS</th>
+                    <th class="small-padding">RATING</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Dynamic Table with Javascript -->
+            </tbody>
+        </table>
+    </fieldset>
+    <br>
+    <div class="FIA">
+        <input class="numberInput" type="number" id="numberInput" name="numberInput" value="1">
+        <button onclick="simulateRace()">Simulate</button>
+    </div>
+
+    <script>
+        var data = [
+        { name: "Max Verstappen", points: 0, rating: 1},
+        { name: "Sergio Perez", points: 0, rating: 1},
+        { name: "Lewis Hamiton", points: 0, rating: 1},
+        { name: "George Russel", points: 0, rating: 1},
+        { name: "Fernando Alonso", points: 0, rating: 1},
+        { name: "Lance Stroll", points: 0, rating: 1},
+        { name: "Lando Norris", points: 0, rating: 1},
+        { name: "Oscar Piastri", points: 0, rating: 1},
+        { name: "Charles Leclerc", points: 0, rating: 1},
+        { name: "Carlos Sainz", points: 0, rating: 1},
+        { name: "Pierre Gasly", points: 0, rating: 1},
+        { name: "Estaban Ocon", points: 0, rating: 1},
+        { name: "Alexander Albon", points: 0, rating: 1},
+        { name: "Logan Sargeant", points: 0, rating: 1},
+        { name: "Daniel Ricciardo",  points: 0, rating: 1},
+        { name: "Yuki Tsunoda", points: 0, rating: 1},
+        { name: "Nico Hulkenberg",  points: 0, rating: 1},
+        { name: "Kevin Magnussen", points: 0, rating: 1},
+        { name: "Valtteri Bottas", points: 0, rating: 1},
+        { name: "Zhou Guanyu", points: 0, rating: 1},
+    ];
+
+    data.sort((a, b) => b.points - a.points);
+    function populateTable(data) {
+        var tableBody = document.getElementById('dynamic-table').getElementsByTagName('tbody')[0];
+        tableBody.innerHTML = "";
+        for (var i = 0; i < data.length; i++) {
+            var row = tableBody.insertRow(i);
+            var cell1 = row.insertCell(0);
+            var cell2 = row.insertCell(1);
+            var cell3 = row.insertCell(2);
+
+            cell1.innerHTML = data[i].name;
+            cell2.innerHTML = data[i].points;
+            cell3.innerHTML = data[i].rating;
+        }
+    }
+
+    var races = 0, randomNumber = 0
+    var numberInputed = document.getElementById('numberInput');
+    
+    function simulateRace() {
+        for (var x = 0; x <= numberInputed.value - 1; x++) {
+            races++;
+            console.log("Corrida Número: " + races);
+            
+            for (var y = 0; y < data.length; y++) {
+                data[y].points += data[y].rating * 0.25;
+            } for (var z = 0; z < 3; z++) {
+                var AnotherRandomNumber = Math.floor(Math.random() * data.length);
+                data[AnotherRandomNumber].rating += Math.round(Math.random());
+            } 
+    
+            data.sort((a, b) => b.points - a.points);
+            populateTable(data);
+        } 
+    } populateTable(data);
+    </script>
+</body>
+</html>
