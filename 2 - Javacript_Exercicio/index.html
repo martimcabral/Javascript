@@ -19,10 +19,10 @@
             <img src="imgs/beb1.jpg">
         </div>
         <div class="shop">
-            <p>Salada</p>
-            <p id="resultado_salada_primaria">404</p>
+            <p>Salada: Manga</p>
+            <p id="form_salada_primaria"></p>
             <form>
-                <select name="amount">
+                <select id="salad_1_selection" name="amount">
                     <option value="none">0</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -31,10 +31,10 @@
                     <option value="5">5</option>
                 </select>
             </form>
-            <p>Salada</p>
-            <p id="resultado_salada_segunda">404</p>
+            <p>Salada: Couve</p>
+            <p id="form_salada_segunda"></p>
             <form>
-                <select name="amount">
+                <select id="salad_2_selection" name="amount">
                     <option value="none">0</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -43,10 +43,10 @@
                     <option value="5">5</option>
                 </select>
             </form>
-            <p>Bebida</p>
-            <p id="resultado_bebida">404</p>
+            <p>Monster Energy</p>
+            <p id="form_bebida"></p>
             <form>
-                <select name="amount">
+                <select id="drink_selection" name="amount">
                     <option value="none">0</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -63,15 +63,16 @@
                 <input type="text" id="nameInput" name="nameInput">
                 <p>Morada:</p>
                 <input type="text" id="addressInput" name="addressInput"><br>
-                <button>Submeter</button>
+                <button onClick="finalizar_compra()">Submeter</button>
             </fieldset>
-            <img class="ligue_ja" src="imgs/ligue.jpg">
+            <a href="tel:+960445028" id="callButton">
+            <img class="ligue_ja" src="imgs/ligue.jpg"></a>
         </div>
         <div class="footer_square"> <!-- About -->
             <p>TomatoKing</p>
             <p>Rua das Alfaces, 9</p>
             <p>7650 - Ceboulas de Cima</p>
-            <p>945 637 28</p>
+            <p>960 445 028</p>
         </div>
     </div>
 </body>
