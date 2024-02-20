@@ -2,13 +2,13 @@ var price_value_1 = 0, price_value_2 = 0, price_value_3 = 0, total = 0; // Decla
 
 function update_salad_1() { // Funcao para atualizar os valores da Primeira Salada
     var selected_value_1 = document.getElementById("salad_1_selection").value; // Pegar o valor selecionado do form "salad_1_selection"
-    price_value_1 = selected_value_1 * 30; // A variavel "price_value_1" será o resultado do valor selecionado vezes 30€ 
+    price_value_1 = selected_value_1 * 20; // A variavel "price_value_1" será o resultado do valor selecionado vezes 30€ 
     document.getElementById("form_salada_primaria").textContent = price_value_1 + "€"; // Substutui o conteudo no HTML pelo o produto da conta anterior
 }
 
 function update_salad_2() { // Funcao para atualizar os valores da Segunda Salada
     var selected_value_2 = document.getElementById("salad_2_selection").value;
-    price_value_2 = selected_value_2 * 20; // A variavel "price_value_2" será o resultado do valor selecionado vezes 20€ 
+    price_value_2 = selected_value_2 * 30; // A variavel "price_value_2" será o resultado do valor selecionado vezes 20€ 
     document.getElementById("form_salada_segunda").textContent = price_value_2 + "€"; // Substutui o conteudo no HTML pelo o produto da conta anterior
 }
 
