@@ -27,6 +27,8 @@ body {
     height: 125px;
     color: white;
     border-radius: 20px;
+    position: absolute;
+    bottom: -3px;
 }
 
 h1 {
@@ -70,23 +72,25 @@ fieldset {
     align-items: row;
 }
 
-.shop_imgs {
-    width: 280px;
-    height: 280px;
-    display: flex;
-    justify-content: center;
-    align-items: row;
-    gap: 40px;
-    margin: 20px auto;
-    
-}
-
 .shop {
     display: flex;
-    justify-content: center;
-    margin: 20px auto;
-    gap: 100px
+    justify-content: space-around;
 }
+
+.shop p {
+    margin: 5px 5px 5px 5px;
+    align-items: center;
+}
+
+.shop_imgs {
+    padding-right: 20px;
+    padding-left: 25px;
+    height: 280px;
+    display: flex;
+    justify-content: space-around;
+    margin: 20px auto; 
+}
+
 
 .header {
     padding: 25px;
@@ -97,8 +101,15 @@ fieldset {
 }
 
 .ligue_ja {
-    height: 200px;
-    width: 350px;
+    height: 150px;
+    width: 275px;
     border-radius: 0px;
     outline: 0px solid rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 75px;
+    margin-right: 75px;
+    padding-top: 20px;
+    padding-left: 55px;
 }
